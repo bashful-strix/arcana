@@ -1,0 +1,24 @@
+*arcana.txt*	For Vim version 8.1	Last change: 2026 Mar 04
+
+
+		  Arcana colour scheme    by bashful_strix
+
+Arcana, a semantically themed dark colour scheme based on an extended kanagwa palatte.
+
+==============================================================================
+Color scheme options					arcana-options*
+
+						*g:arcana_transp_bg*
+Set to 0 if you do not want a transparent background. Takes effect only in the
+terminal.
+>
+	let g:arcana_transp_bg = 0
+<
+
+						*g:arcana_extend_ts*
+Set to 0 if you do not want to extend and tweak the treesitter highlight groups.
+>
+	let g:arcana_extend_ts = 0
+<
+
+ vim:tw=78:ts=8:noet:ft=help:norl:

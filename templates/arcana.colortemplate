@@ -1,0 +1,285 @@
+; meta {{{
+Full name:     Arcana
+Short name:    arcana
+Version:       1.0.0
+Author:        bashful_strix <19427075+bashful-strix@users.noreply.github.com>
+Description:   Arcana, a semantically themed dark colour scheme based on an extended kanagwa palatte.
+Neovim:        yes
+; }}}
+
+; documentation {{{
+Include: _help.colortemplate
+; }}}
+
+; colour palette {{{
+Background: dark
+
+Include: _colours.colortemplate
+; }}}
+
+; terminal colors {{{
+Term colors:         dragonBlack0      autumnRed         autumnGreen
+Term colors:         boatYellow2       crystalBlue       oniViolet
+Term colors:         waveAqua1         oldWhite          fujiGray
+Term colors:         samuraiRed        springGreen       carpYellow
+Term colors:         springBlue        springViolet1     waveAqua2
+Term colors:         fujiWhite
+; }}}
+
+; highlight groups {{{ 1
+; group              foreground        background        attributes
+
+; transparent highlight groups {{{ 2
+#if get(g:, '@optionprefix_transp_bg', 1)
+Normal               oldWhite          none
+Terminal             oldWhite          none
+#else
+Normal               oldWhite          dragonBlack3
+Terminal             oldWhite          dragonBlack3
+#endif
+; }}} 2
+
+; default highlight groups {{{ 2
+ColorColumn          none              dragonBlack4
+Conceal              dragonGreen       dragonBlack4      bold
+Cursor               dragonBlack3      fujiWhite
+lCursor           -> Cursor ; See `:help lCursor`
+CursorIM          -> Cursor
+CursorColumn      -> Cursor
+CursorLine           none              dragonBlack5
+Directory            crystalBlue       none
+DiffAdd              none              winterGreen
+DiffChange           none              winterBlue
+DiffDelete           autumnRed         winterRed
+DiffText             none              winterYellow
+; DiffTextAdd       -> DiffText ; default link
+EndOfBuffer          sumiInk3          none
+ErrorMsg             samuraiRed        none
+VertSplit            dragonGray3       none
+
+Folded               fujiWhite         none              bold
+FoldColumn           dragonBlack6      dragonBlack4
+SignColumn           springViolet1     dragonBlack4
+IncSearch            waveBlue1         roninYellow
+LineNr               dragonGray3       dragonBlack4
+LineNrAbove       -> LineNr
+LineNrBelow       -> LineNr
+CursorLineNr         roninYellow       dragonBlack4      bold
+CursorLineFold    -> FoldColumn
+CursorLineSign    -> SignColumn
+
+MatchParen           peachRed          none              bold,underline
+MessageWindow     -> WarningMsg
+ModeMsg              roninYellow       none              bold
+; MsgArea
+MoreMsg              dragonBlue        none
+NonText              dragonBlack6      none
+
+Pmenu                none              waveBlue1
+PmenuSel             none              waveBlue2
+PmenuKind            none              lotusInk2
+PmenuKindSel         none              sumiInk6
+PmenuExtra           none              sumiInk5
+PmenuExtraSel        none              lotusInk1
+PmenuSbar            none              dragonViolet2
+PmenuThumb           none              dragonViolet
+PmenuMatch           autumnYellow      none              underline
+PmenuMatchSel        carpYellow        none              underline
+; PmenuBorder       -> Pmenu ; default link
+; PmenuShadow
+; CompMatchIns
+; PreInsert
+PopupSelected     -> PmenuSel
+PopupNotification -> WarningMsg
+
+Question          -> MoreMsg
+QuickFixLine         none              sumiInk4
+Search               fujiWhite         waveBlue2
+CurSearch            dragonBlack3      autumnYellow      bold
+
+SpecialKey           lotusOrange2      none
+SpellBad             none              none              s=samuraiRed  undercurl
+SpellCap             none              none              s=roninYellow undercurl
+SpellLocal           none              none              s=roninYellow undercurl
+SpellRare            none              none              s=roninYellow undercurl
+
+StatusLine           oldWhite          dragonBlack5      underline
+StatusLineNC         dragonGray3       dragonBlack4      underline
+StatusLineTerm       oldWhite          dragonBlack0      reverse
+StatusLineTermNC     dragonGray3       dragonBlack0      reverse
+TabLine              dragonGray3       dragonBlack0      underline
+TabLineFill          none              dragonBlack3      underline
+TabLineSel           oldWhite          dragonBlack4      underline
+; TabPanel
+; TabPanelFill
+; TabPanelSel
+Title                crystalBlue       none              bold
+; TitleBar
+; TitleBarNC
+
+Visual               none              waveBlue1
+VisualNOS         -> Visual
+
+WarningMsg           roninYellow       none
+WildMenu          -> Pmenu
+
+debugBreakpoint      springBlue        dragonBlack4
+debugPC              none              winterRed
+; }}} 2
+
+; other conventional group names (see `:help group-name`) {{{ 2
+Comment              lotusGray2        none              italic
+
+Constant             surimiOrange      none
+String               springGreen       none
+Character            autumnGreen       none
+Number               sakuraPink        none
+Boolean              roninYellow       none              bold
+Float             -> Number
+
+Identifier           carpYellow        none
+Function             autumnYellow      none
+
+Statement            lotusRed2         none
+Conditional          lotusRed          none
+Repeat            -> Conditional
+Label             -> Conditional
+Operator             lotusOrange       none
+Keyword              dragonRed         none
+Exception            waveRed           none
+
+PreProc              lotusPink         none
+Include              dragonViolet2     none
+Define               dragonPink        none
+Macro                lotusTeal1        none
+PreCondit            dragonOrange      none
+
+Type                 waveAqua2         none              italic
+StorageClass         lotusViolet2      none
+Structure            lotusTeal3        none
+Typedef           -> Type
+
+Special              waveAqua4         none
+SpecialChar          springViolet1     none
+Tag               -> Type
+Delimiter            lotusAqua         none
+SpecialComment       dragonAsh         none              italic
+Debug                oniViolet         none
+
+Underlined           springBlue        none              underline
+; Bold
+; Italic
+; BoldItalic
+
+Ignore            -> NonText
+
+Error                samuraiRed        none
+
+Todo                 waveBlue1         dragonBlue        bold
+
+Added             -> DiffAdd
+Changed           -> DiffChange
+Removed           -> DiffDelete
+
+; See `:help window-toolbar`
+ToolbarLine          none              sumiInk3
+ToolbarButton        fujiWhite         sumiInk3          bold
+; }}} 2
+
+; additional highlight groups {{{ 2
+DiagnosticError      autumnRed         none
+DiagnosticWarn       boatYellow2       none
+DiagnosticInfo       crystalBlue       none
+DiagnosticHint       waveAqua1         none
+
+DiagnosticUnderlineError none          none              s=autumnRed   underline
+DiagnosticUnderlineWarn  none          none              s=boatYellow2 underline
+DiagnosticUnderlineInfo  none          none              s=crystalBlue underline
+DiagnosticUnderlineHint  none          none              s=waveAqua1   underline
+
+DiagnosticVirtualTextError senpouRed    none
+DiagnosticVirtualTextWarn  senpouYellow none
+DiagnosticVirtualTextInfo  senpouBlue   none
+DiagnosticVirtualTextHint  senpouAqua   none
+
+; term colours
+ArcBlack              dragonBlack0      none
+ArcRed                autumnRed         none
+ArcGreen              autumnGreen       none
+ArcYellow             boatYellow2       none
+ArcBlue               crystalBlue       none
+ArcMagenta            oniViolet         none
+ArcCyan               waveAqua1         none
+ArcWhite              oldWhite          none
+ArcBrightBlack        fujiGray          none
+ArcBrightRed          samuraiRed        none
+ArcBrightGreen        springGreen       none
+ArcBrightYellow       carpYellow        none
+ArcBrightBlue         springBlue        none
+ArcBrightMagenta      springViolet1     none
+ArcBrightCyan         waveAqua2         none
+ArcBrightWhite        fujiWhite         none
+
+; italic term colours
+ArcBlackItalic         dragonBlack0    none              italic
+ArcRedItalic           autumnRed       none              italic
+ArcGreenItalic         autumnGreen     none              italic
+ArcYellowItalic        boatYellow2     none              italic
+ArcBlueItalic          crystalBlue     none              italic
+ArcMagentaItalic       oniViolet       none              italic
+ArcCyanItalic          waveAqua1       none              italic
+ArcWhiteItalic         oldWhite        none              italic
+ArcBrightBlackItalic   fujiGray        none              italic
+ArcBrightRedItalic     samuraiRed      none              italic
+ArcBrightGreenItalic   springGreen     none              italic
+ArcBrightYellowItalic  carpYellow      none              italic
+ArcBrightBlueItalic    springBlue      none              italic
+ArcBrightMagentaItalic springViolet1   none              italic
+ArcBrightCyanItalic    waveAqua2       none              italic
+ArcBrightWhiteItalic   fujiWhite       none              italic
+; }}} 2
+
+; optional extensions {{{ 2
+#if get(g:, '@optionprefix_extend_ts', has('nvim'))
+@punctuation.delimiter              -> SpecialKey
+
+@constant.builtin                   -> Boolean
+
+@property                           -> Normal
+@field                              -> Normal
+@variable.member                    -> @field
+@variable                           -> Identifier
+
+@namespace                          -> Statement
+@module                             -> @namespace
+@tag.delimiter                      -> Label
+@conditional                        -> Conditional
+@keyword.conditional                -> @conditional
+@keyword.repeat                     -> Repeat
+@keyword.return                     -> Operator
+@punctuation.special                -> Operator
+@exception                          -> Exception
+@keyword.exception                  -> @exception
+
+@keyword.coroutine                  -> PreProc
+@include                            -> Include
+@keyword.import                     -> @include
+@parameter                          -> Define
+@variable.parameter                 -> @parameter
+@tag.attribute                      -> Define
+@tag.builtin                        -> Macro
+@variable.builtin                   -> PreCondit
+@function.builtin                   -> PreCondit
+@function.macro                     -> PreCondit
+@constant.macro                     -> PreCondit
+
+@keyword.modifier                   -> StorageClass
+
+@string.regexp                      -> Special
+@comment.documentation              -> SpecialComment
+@keyword.debug                      -> Debug
+#endif
+; }}} 2
+; }}} 1
+
+; vim: ft=colortemplate fdm=marker cc=22,40,58 et ts=2 sw=2

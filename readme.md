@@ -34,7 +34,7 @@ clone/download this repository to `pack/<name>/<start|opt>/arcana`, where
 want to load the theme by default, or `opt` if you want to load it explicitly.
 Nightly versions of Neovim also have a built-in plugin manager which manages
 cloning as well (see
-[:help vim.pack](https://neovim.io/doc/user/pack/#vim.pack).
+[:help vim.pack](https://neovim.io/doc/user/pack/#vim.pack)).
 
 If you prefer to use an external plugin manager, follow the usual instructions
 for that package.
@@ -55,9 +55,9 @@ would like to disable this feature.
 
 ## Acknowledgments
 
-- Being an extends remix of the palette, Arcana owes a lot to
+- Being an extended remix of the palette, Arcana owes a lot to
   [kanagawa](https://github.com/rebelot/kanagawa.nvim). Check it out if you want
-  something with different theming or more configurable.
+  something more configurable or with different theming.
 - Arcana is built with
   [vim-colortemplate](https://github.com/lifepillar/vim-colortemplate) (v2 for
   Neovim compatibility), an excellent tool if you want to create your own

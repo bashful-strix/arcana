@@ -1,7 +1,7 @@
 ; meta {{{
 Full name:     Arcana
 Short name:    arcana
-Version:       1.0.0
+Version:       1.1.0
 Author:        bashful_strix <19427075+bashful-strix@users.noreply.github.com>
 Description:   Arcana, a semantically themed dark colour scheme based on an extended kanagwa palatte.
 Neovim:        yes
@@ -148,20 +148,20 @@ Operator             lotusOrange       none
 Keyword              dragonRed         none
 Exception            waveRed           none
 
-PreProc              lotusPink         none
+PreProc              dragonViolet      none
 Include              dragonViolet2     none
 Define               dragonPink        none
-Macro                lotusTeal1        none
+Macro                lotusViolet2      none
 PreCondit            dragonOrange      none
 
 Type                 waveAqua2         none              italic
-StorageClass         lotusViolet2      none
+StorageClass         lotusPink         none
 Structure            lotusTeal3        none
 Typedef           -> Type
 
 Special              waveAqua4         none
-SpecialChar          springViolet1     none
-Tag               -> Type
+SpecialChar          lotusTeal1        none
+Tag                  waveAqua5         none
 Delimiter            lotusAqua         none
 SpecialComment       dragonAsh         none              italic
 Debug                oniViolet         none
@@ -203,22 +203,22 @@ DiagnosticVirtualTextInfo  senpouBlue   none
 DiagnosticVirtualTextHint  senpouAqua   none
 
 ; term colours
-ArcBlack              dragonBlack0      none
-ArcRed                autumnRed         none
-ArcGreen              autumnGreen       none
-ArcYellow             boatYellow2       none
-ArcBlue               crystalBlue       none
-ArcMagenta            oniViolet         none
-ArcCyan               waveAqua1         none
-ArcWhite              oldWhite          none
-ArcBrightBlack        fujiGray          none
-ArcBrightRed          samuraiRed        none
-ArcBrightGreen        springGreen       none
-ArcBrightYellow       carpYellow        none
-ArcBrightBlue         springBlue        none
-ArcBrightMagenta      springViolet1     none
-ArcBrightCyan         waveAqua2         none
-ArcBrightWhite        fujiWhite         none
+ArcBlack             dragonBlack0      none
+ArcRed               autumnRed         none
+ArcGreen             autumnGreen       none
+ArcYellow            boatYellow2       none
+ArcBlue              crystalBlue       none
+ArcMagenta           oniViolet         none
+ArcCyan              waveAqua1         none
+ArcWhite             oldWhite          none
+ArcBrightBlack       fujiGray          none
+ArcBrightRed         samuraiRed        none
+ArcBrightGreen       springGreen       none
+ArcBrightYellow      carpYellow        none
+ArcBrightBlue        springBlue        none
+ArcBrightMagenta     springViolet1     none
+ArcBrightCyan        waveAqua2         none
+ArcBrightWhite       fujiWhite         none
 
 ; italic term colours
 ArcBlackItalic         dragonBlack0    none              italic
@@ -261,18 +261,19 @@ ArcBrightWhiteItalic   fujiWhite       none              italic
 @exception                          -> Exception
 @keyword.exception                  -> @exception
 
-@keyword.coroutine                  -> PreProc
 @include                            -> Include
 @keyword.import                     -> @include
 @parameter                          -> Define
 @variable.parameter                 -> @parameter
 @tag.attribute                      -> Define
-@tag.builtin                        -> Macro
+; @tag.builtin                        -> Macro
+@tag.builtin                        -> Structure
 @variable.builtin                   -> PreCondit
 @function.builtin                   -> PreCondit
 @function.macro                     -> PreCondit
 @constant.macro                     -> PreCondit
 
+@keyword.coroutine                  -> StorageClass
 @keyword.modifier                   -> StorageClass
 
 @string.regexp                      -> Special

@@ -148,18 +148,13 @@ Operator             lotusOrange       none
 Keyword              dragonRed         none
 Exception            waveRed           none
 
-; PreProc              dragonViolet      none
 PreProc              lotusViolet2      none
 Include              dragonViolet2     none
 Define               dragonPink        none
-; Macro                lotusViolet2      none
 Macro                lotusPink         none
-; Macro                dragonOrange      none
 PreCondit            dragonOrange      none
-; PreCondit            lotusPink         none
 
 Type                 waveAqua2         none              italic
-; StorageClass         lotusPink         none
 StorageClass         dragonViolet      none
 Structure            lotusTeal3        none
 Typedef           -> Type
@@ -280,7 +275,6 @@ ArcBrightWhiteItalic   fujiWhite       none              italic
 
 @keyword.coroutine                  -> StorageClass
 @keyword.modifier                   -> StorageClass
-; @tag.builtin                        -> Macro
 @tag.builtin                        -> Structure
 
 @string.regexp                      -> Special

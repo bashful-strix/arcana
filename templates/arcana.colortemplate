@@ -1,7 +1,7 @@
 ; meta {{{
 Full name:     Arcana
 Short name:    arcana
-Version:       1.1.0
+Version:       1.2.0
 Author:        bashful_strix <19427075+bashful-strix@users.noreply.github.com>
 Description:   Arcana, a semantically themed dark colour scheme based on an extended kanagwa palatte.
 Neovim:        yes
@@ -148,14 +148,19 @@ Operator             lotusOrange       none
 Keyword              dragonRed         none
 Exception            waveRed           none
 
-PreProc              dragonViolet      none
+; PreProc              dragonViolet      none
+PreProc              lotusViolet2      none
 Include              dragonViolet2     none
 Define               dragonPink        none
-Macro                lotusViolet2      none
+; Macro                lotusViolet2      none
+Macro                lotusPink         none
+; Macro                dragonOrange      none
 PreCondit            dragonOrange      none
+; PreCondit            lotusPink         none
 
 Type                 waveAqua2         none              italic
-StorageClass         lotusPink         none
+; StorageClass         lotusPink         none
+StorageClass         dragonViolet      none
 Structure            lotusTeal3        none
 Typedef           -> Type
 
@@ -256,6 +261,7 @@ ArcBrightWhiteItalic   fujiWhite       none              italic
 @conditional                        -> Conditional
 @keyword.conditional                -> @conditional
 @keyword.repeat                     -> Repeat
+@keyword.operator                   -> Operator
 @keyword.return                     -> Operator
 @punctuation.special                -> Operator
 @exception                          -> Exception
@@ -266,15 +272,16 @@ ArcBrightWhiteItalic   fujiWhite       none              italic
 @parameter                          -> Define
 @variable.parameter                 -> @parameter
 @tag.attribute                      -> Define
-; @tag.builtin                        -> Macro
-@tag.builtin                        -> Structure
-@variable.builtin                   -> PreCondit
+@constant.macro                     -> PreProc
+@variable.builtin                   -> PreProc
 @function.builtin                   -> PreCondit
 @function.macro                     -> PreCondit
-@constant.macro                     -> PreCondit
+@keyword.directive                  -> Macro
 
 @keyword.coroutine                  -> StorageClass
 @keyword.modifier                   -> StorageClass
+; @tag.builtin                        -> Macro
+@tag.builtin                        -> Structure
 
 @string.regexp                      -> Special
 @comment.documentation              -> SpecialComment

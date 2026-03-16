@@ -1,7 +1,7 @@
 ; meta {{{
 Full name:     Arcana
 Short name:    arcana
-Version:       1.2.0
+Version:       1.3.0
 Author:        bashful_strix <19427075+bashful-strix@users.noreply.github.com>
 Description:   Arcana, a semantically themed dark colour scheme based on an extended kanagwa palatte.
 Neovim:        yes
@@ -148,14 +148,14 @@ Operator             lotusOrange       none
 Keyword              dragonRed         none
 Exception            waveRed           none
 
-PreProc              lotusViolet2      none
+PreProc              lotusPink         none
 Include              dragonViolet2     none
 Define               dragonPink        none
-Macro                lotusPink         none
+Macro                lotusViolet2      none
 PreCondit            dragonOrange      none
 
 Type                 waveAqua2         none              italic
-StorageClass         dragonViolet      none
+StorageClass         autumnRed         none
 Structure            lotusTeal3        none
 Typedef           -> Type
 

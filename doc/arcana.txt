@@ -1,4 +1,4 @@
-*arcana.txt*	For Vim version 8.1	Last change: 2026 Mar 10
+*arcana.txt*	For Vim version 8.1	Last change: 2026 Mar 16
 
 
 		  Arcana colour scheme    by bashful_strix

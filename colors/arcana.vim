@@ -1,5 +1,5 @@
 " Name:         Arcana
-" Version:      1.6.0
+" Version:      1.7.0
 " Description:  Arcana, a semantically themed dark colour scheme based on an extended kanagwa palatte.
 " Author:       bashful_strix <19427075+bashful-strix@users.noreply.github.com>
 " Maintainer:   bashful_strix <19427075+bashful-strix@users.noreply.github.com>
@@ -146,7 +146,7 @@ hi Italic guifg=#e6c384 guibg=NONE gui=italic cterm=italic
 hi BoldItalic guifg=#ffa066 guibg=NONE gui=bold,italic cterm=bold,italic
 hi! link Ignore NonText
 hi Error guifg=#e82424 guibg=NONE gui=NONE cterm=NONE
-hi Todo guifg=#223249 guibg=#658594 gui=bold cterm=bold
+hi Todo guifg=#658594 guibg=NONE gui=bold cterm=bold
 hi! link Added DiffAdd
 hi! link Changed DiffChange
 hi! link Removed DiffDelete
@@ -378,7 +378,7 @@ if s:t_Co >= 256
   hi BoldItalic ctermfg=216 ctermbg=NONE cterm=bold,italic
   hi! link Ignore NonText
   hi Error ctermfg=196 ctermbg=NONE cterm=NONE
-  hi Todo ctermfg=236 ctermbg=66 cterm=bold
+  hi Todo ctermfg=66 ctermbg=NONE cterm=bold
   hi! link Added DiffAdd
   hi! link Changed DiffChange
   hi! link Removed DiffDelete

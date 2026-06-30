@@ -1,5 +1,5 @@
 " Name:         Arcana
-" Version:      1.5.0
+" Version:      1.6.0
 " Description:  Arcana, a semantically themed dark colour scheme based on an extended kanagwa palatte.
 " Author:       bashful_strix <19427075+bashful-strix@users.noreply.github.com>
 " Maintainer:   bashful_strix <19427075+bashful-strix@users.noreply.github.com>
@@ -17,25 +17,25 @@ let s:t_Co = has('gui_running') ? -1 : get(g:, 'arcana_t_Co', get(g:, 't_Co', ex
 let s:italics = has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32'))
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
-  let g:terminal_ansi_colors = ['#0d0c0c', '#c34043', '#76946a', '#c0a36e', '#7e9cd8', '#957fb8', '#6a9589', '#c8c093', '#727169', '#e82424', '#98bb6c', '#e6c384', '#7fb4ca', '#938aa9', '#7aa89f', '#dcd7ba']
+  let g:terminal_ansi_colors = ['#282727', '#c4746e', '#76946a', '#dca561', '#597b75', '#a292a3', '#7aa89f', '#716e61', '#49443c', '#c34043', '#98bb6c', '#cc6d00', '#4e8ca2', '#b35b79', '#7aa880', '#e6c384']
 endif
 if has('nvim')
-  let g:terminal_color_0 = '#0d0c0c'
-  let g:terminal_color_1 = '#c34043'
+  let g:terminal_color_0 = '#282727'
+  let g:terminal_color_1 = '#c4746e'
   let g:terminal_color_2 = '#76946a'
-  let g:terminal_color_3 = '#c0a36e'
-  let g:terminal_color_4 = '#7e9cd8'
-  let g:terminal_color_5 = '#957fb8'
-  let g:terminal_color_6 = '#6a9589'
-  let g:terminal_color_7 = '#c8c093'
-  let g:terminal_color_8 = '#727169'
-  let g:terminal_color_9 = '#e82424'
+  let g:terminal_color_3 = '#dca561'
+  let g:terminal_color_4 = '#597b75'
+  let g:terminal_color_5 = '#a292a3'
+  let g:terminal_color_6 = '#7aa89f'
+  let g:terminal_color_7 = '#716e61'
+  let g:terminal_color_8 = '#49443c'
+  let g:terminal_color_9 = '#c34043'
   let g:terminal_color_10 = '#98bb6c'
-  let g:terminal_color_11 = '#e6c384'
-  let g:terminal_color_12 = '#7fb4ca'
-  let g:terminal_color_13 = '#938aa9'
-  let g:terminal_color_14 = '#7aa89f'
-  let g:terminal_color_15 = '#dcd7ba'
+  let g:terminal_color_11 = '#cc6d00'
+  let g:terminal_color_12 = '#4e8ca2'
+  let g:terminal_color_13 = '#b35b79'
+  let g:terminal_color_14 = '#7aa880'
+  let g:terminal_color_15 = '#e6c384'
 endif
 if get(g:, 'arcana_transp_bg', 1)
   hi Normal guifg=#c8c093 guibg=NONE gui=NONE cterm=NONE
@@ -172,38 +172,38 @@ hi! link DiagnosticVirtualLinesWarn DiagnosticVirtualTextWarn
 hi! link DiagnosticVirtualLinesInfo DiagnosticVirtualTextInfo
 hi! link DiagnosticVirtualLinesHint DiagnosticVirtualTextHint
 hi! link DiagnosticVirtualLinesOk DiagnosticVirtualTextOk
-hi ArcBlack guifg=#0d0c0c guibg=NONE gui=NONE cterm=NONE
-hi ArcRed guifg=#c34043 guibg=NONE gui=NONE cterm=NONE
+hi ArcBlack guifg=#282727 guibg=NONE gui=NONE cterm=NONE
+hi ArcRed guifg=#c4746e guibg=NONE gui=NONE cterm=NONE
 hi ArcGreen guifg=#76946a guibg=NONE gui=NONE cterm=NONE
-hi ArcYellow guifg=#c0a36e guibg=NONE gui=NONE cterm=NONE
-hi ArcBlue guifg=#7e9cd8 guibg=NONE gui=NONE cterm=NONE
-hi ArcMagenta guifg=#957fb8 guibg=NONE gui=NONE cterm=NONE
-hi ArcCyan guifg=#6a9589 guibg=NONE gui=NONE cterm=NONE
-hi ArcWhite guifg=#c8c093 guibg=NONE gui=NONE cterm=NONE
-hi ArcBrightBlack guifg=#727169 guibg=NONE gui=NONE cterm=NONE
-hi ArcBrightRed guifg=#e82424 guibg=NONE gui=NONE cterm=NONE
+hi ArcYellow guifg=#dca561 guibg=NONE gui=NONE cterm=NONE
+hi ArcBlue guifg=#597b75 guibg=NONE gui=NONE cterm=NONE
+hi ArcMagenta guifg=#a292a3 guibg=NONE gui=NONE cterm=NONE
+hi ArcCyan guifg=#7aa89f guibg=NONE gui=NONE cterm=NONE
+hi ArcWhite guifg=#716e61 guibg=NONE gui=NONE cterm=NONE
+hi ArcBrightBlack guifg=#49443c guibg=NONE gui=NONE cterm=NONE
+hi ArcBrightRed guifg=#c34043 guibg=NONE gui=NONE cterm=NONE
 hi ArcBrightGreen guifg=#98bb6c guibg=NONE gui=NONE cterm=NONE
-hi ArcBrightYellow guifg=#e6c384 guibg=NONE gui=NONE cterm=NONE
-hi ArcBrightBlue guifg=#7fb4ca guibg=NONE gui=NONE cterm=NONE
-hi ArcBrightMagenta guifg=#938aa9 guibg=NONE gui=NONE cterm=NONE
-hi ArcBrightCyan guifg=#7aa89f guibg=NONE gui=NONE cterm=NONE
-hi ArcBrightWhite guifg=#dcd7ba guibg=NONE gui=NONE cterm=NONE
-hi ArcBlackItalic guifg=#0d0c0c guibg=NONE gui=italic cterm=italic
-hi ArcRedItalic guifg=#c34043 guibg=NONE gui=italic cterm=italic
+hi ArcBrightYellow guifg=#cc6d00 guibg=NONE gui=NONE cterm=NONE
+hi ArcBrightBlue guifg=#4e8ca2 guibg=NONE gui=NONE cterm=NONE
+hi ArcBrightMagenta guifg=#b35b79 guibg=NONE gui=NONE cterm=NONE
+hi ArcBrightCyan guifg=#7aa880 guibg=NONE gui=NONE cterm=NONE
+hi ArcBrightWhite guifg=#e6c384 guibg=NONE gui=NONE cterm=NONE
+hi ArcBlackItalic guifg=#282727 guibg=NONE gui=italic cterm=italic
+hi ArcRedItalic guifg=#c4746e guibg=NONE gui=italic cterm=italic
 hi ArcGreenItalic guifg=#76946a guibg=NONE gui=italic cterm=italic
-hi ArcYellowItalic guifg=#c0a36e guibg=NONE gui=italic cterm=italic
-hi ArcBlueItalic guifg=#7e9cd8 guibg=NONE gui=italic cterm=italic
-hi ArcMagentaItalic guifg=#957fb8 guibg=NONE gui=italic cterm=italic
-hi ArcCyanItalic guifg=#6a9589 guibg=NONE gui=italic cterm=italic
-hi ArcWhiteItalic guifg=#c8c093 guibg=NONE gui=italic cterm=italic
-hi ArcBrightBlackItalic guifg=#727169 guibg=NONE gui=italic cterm=italic
-hi ArcBrightRedItalic guifg=#e82424 guibg=NONE gui=italic cterm=italic
+hi ArcYellowItalic guifg=#dca561 guibg=NONE gui=italic cterm=italic
+hi ArcBlueItalic guifg=#597b75 guibg=NONE gui=italic cterm=italic
+hi ArcMagentaItalic guifg=#a292a3 guibg=NONE gui=italic cterm=italic
+hi ArcCyanItalic guifg=#7aa89f guibg=NONE gui=italic cterm=italic
+hi ArcWhiteItalic guifg=#716e61 guibg=NONE gui=italic cterm=italic
+hi ArcBrightBlackItalic guifg=#49443c guibg=NONE gui=italic cterm=italic
+hi ArcBrightRedItalic guifg=#c34043 guibg=NONE gui=italic cterm=italic
 hi ArcBrightGreenItalic guifg=#98bb6c guibg=NONE gui=italic cterm=italic
-hi ArcBrightYellowItalic guifg=#e6c384 guibg=NONE gui=italic cterm=italic
-hi ArcBrightBlueItalic guifg=#7fb4ca guibg=NONE gui=italic cterm=italic
-hi ArcBrightMagentaItalic guifg=#938aa9 guibg=NONE gui=italic cterm=italic
-hi ArcBrightCyanItalic guifg=#7aa89f guibg=NONE gui=italic cterm=italic
-hi ArcBrightWhiteItalic guifg=#dcd7ba guibg=NONE gui=italic cterm=italic
+hi ArcBrightYellowItalic guifg=#cc6d00 guibg=NONE gui=italic cterm=italic
+hi ArcBrightBlueItalic guifg=#4e8ca2 guibg=NONE gui=italic cterm=italic
+hi ArcBrightMagentaItalic guifg=#b35b79 guibg=NONE gui=italic cterm=italic
+hi ArcBrightCyanItalic guifg=#7aa880 guibg=NONE gui=italic cterm=italic
+hi ArcBrightWhiteItalic guifg=#e6c384 guibg=NONE gui=italic cterm=italic
 if !s:italics
   hi Comment gui=NONE cterm=NONE
   hi Type gui=NONE cterm=NONE
@@ -404,38 +404,38 @@ if s:t_Co >= 256
   hi! link DiagnosticVirtualLinesInfo DiagnosticVirtualTextInfo
   hi! link DiagnosticVirtualLinesHint DiagnosticVirtualTextHint
   hi! link DiagnosticVirtualLinesOk DiagnosticVirtualTextOk
-  hi ArcBlack ctermfg=232 ctermbg=NONE cterm=NONE
-  hi ArcRed ctermfg=131 ctermbg=NONE cterm=NONE
+  hi ArcBlack ctermfg=235 ctermbg=NONE cterm=NONE
+  hi ArcRed ctermfg=167 ctermbg=NONE cterm=NONE
   hi ArcGreen ctermfg=65 ctermbg=NONE cterm=NONE
   hi ArcYellow ctermfg=179 ctermbg=NONE cterm=NONE
-  hi ArcBlue ctermfg=111 ctermbg=NONE cterm=NONE
-  hi ArcMagenta ctermfg=104 ctermbg=NONE cterm=NONE
-  hi ArcCyan ctermfg=66 ctermbg=NONE cterm=NONE
-  hi ArcWhite ctermfg=144 ctermbg=NONE cterm=NONE
-  hi ArcBrightBlack ctermfg=242 ctermbg=NONE cterm=NONE
-  hi ArcBrightRed ctermfg=196 ctermbg=NONE cterm=NONE
+  hi ArcBlue ctermfg=66 ctermbg=NONE cterm=NONE
+  hi ArcMagenta ctermfg=139 ctermbg=NONE cterm=NONE
+  hi ArcCyan ctermfg=109 ctermbg=NONE cterm=NONE
+  hi ArcWhite ctermfg=242 ctermbg=NONE cterm=NONE
+  hi ArcBrightBlack ctermfg=238 ctermbg=NONE cterm=NONE
+  hi ArcBrightRed ctermfg=131 ctermbg=NONE cterm=NONE
   hi ArcBrightGreen ctermfg=107 ctermbg=NONE cterm=NONE
-  hi ArcBrightYellow ctermfg=222 ctermbg=NONE cterm=NONE
-  hi ArcBrightBlue ctermfg=74 ctermbg=NONE cterm=NONE
-  hi ArcBrightMagenta ctermfg=103 ctermbg=NONE cterm=NONE
-  hi ArcBrightCyan ctermfg=109 ctermbg=NONE cterm=NONE
-  hi ArcBrightWhite ctermfg=187 ctermbg=NONE cterm=NONE
-  hi ArcBlackItalic ctermfg=232 ctermbg=NONE cterm=italic
-  hi ArcRedItalic ctermfg=131 ctermbg=NONE cterm=italic
+  hi ArcBrightYellow ctermfg=166 ctermbg=NONE cterm=NONE
+  hi ArcBrightBlue ctermfg=31 ctermbg=NONE cterm=NONE
+  hi ArcBrightMagenta ctermfg=132 ctermbg=NONE cterm=NONE
+  hi ArcBrightCyan ctermfg=108 ctermbg=NONE cterm=NONE
+  hi ArcBrightWhite ctermfg=222 ctermbg=NONE cterm=NONE
+  hi ArcBlackItalic ctermfg=235 ctermbg=NONE cterm=italic
+  hi ArcRedItalic ctermfg=167 ctermbg=NONE cterm=italic
   hi ArcGreenItalic ctermfg=65 ctermbg=NONE cterm=italic
   hi ArcYellowItalic ctermfg=179 ctermbg=NONE cterm=italic
-  hi ArcBlueItalic ctermfg=111 ctermbg=NONE cterm=italic
-  hi ArcMagentaItalic ctermfg=104 ctermbg=NONE cterm=italic
-  hi ArcCyanItalic ctermfg=66 ctermbg=NONE cterm=italic
-  hi ArcWhiteItalic ctermfg=144 ctermbg=NONE cterm=italic
-  hi ArcBrightBlackItalic ctermfg=242 ctermbg=NONE cterm=italic
-  hi ArcBrightRedItalic ctermfg=196 ctermbg=NONE cterm=italic
+  hi ArcBlueItalic ctermfg=66 ctermbg=NONE cterm=italic
+  hi ArcMagentaItalic ctermfg=139 ctermbg=NONE cterm=italic
+  hi ArcCyanItalic ctermfg=109 ctermbg=NONE cterm=italic
+  hi ArcWhiteItalic ctermfg=242 ctermbg=NONE cterm=italic
+  hi ArcBrightBlackItalic ctermfg=238 ctermbg=NONE cterm=italic
+  hi ArcBrightRedItalic ctermfg=131 ctermbg=NONE cterm=italic
   hi ArcBrightGreenItalic ctermfg=107 ctermbg=NONE cterm=italic
-  hi ArcBrightYellowItalic ctermfg=222 ctermbg=NONE cterm=italic
-  hi ArcBrightBlueItalic ctermfg=74 ctermbg=NONE cterm=italic
-  hi ArcBrightMagentaItalic ctermfg=103 ctermbg=NONE cterm=italic
-  hi ArcBrightCyanItalic ctermfg=109 ctermbg=NONE cterm=italic
-  hi ArcBrightWhiteItalic ctermfg=187 ctermbg=NONE cterm=italic
+  hi ArcBrightYellowItalic ctermfg=166 ctermbg=NONE cterm=italic
+  hi ArcBrightBlueItalic ctermfg=31 ctermbg=NONE cterm=italic
+  hi ArcBrightMagentaItalic ctermfg=132 ctermbg=NONE cterm=italic
+  hi ArcBrightCyanItalic ctermfg=108 ctermbg=NONE cterm=italic
+  hi ArcBrightWhiteItalic ctermfg=222 ctermbg=NONE cterm=italic
   if !s:italics
     hi Comment cterm=NONE
     hi Type cterm=NONE
@@ -620,10 +620,8 @@ endif
 " Color: lotusTeal2    #6693bf           ~
 " Color: lotusTeal3    #5a7785           ~
 " Color: lotusCyan     #d7e3d8           ~
-" Term colors:         dragonBlack0      autumnRed         autumnGreen
-" Term colors:         boatYellow2       crystalBlue       oniViolet
-" Term colors:         waveAqua1         oldWhite          fujiGray
-" Term colors:         samuraiRed        springGreen       carpYellow
-" Term colors:         springBlue        springViolet1     waveAqua2
-" Term colors:         fujiWhite
+" Term colors:         dragonBlack4      dragonRed         autumnGreen       autumnYellow
+" Term colors:         lotusAqua         dragonPink        waveAqua2         lotusGray2
+" Term colors:         winterYellow      autumnRed         springGreen       lotusOrange
+" Term colors:         lotusTeal1        lotusPink         waveAqua4         carpYellow
 " vim: et ts=8 sw=2 sts=2
